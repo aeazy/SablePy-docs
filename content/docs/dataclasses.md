@@ -102,18 +102,23 @@
 
 ### Config
 
-<strong id='config'>Config</strong>(<b>displayLogo</b>=<i>False</i>)
+<strong id='config'>Config</strong>(<b>circadian_info=CircadianInfo(highlight=True, light_start=6, dark_start=18)</b>, <b>title=Title(text=None, size=18, visible=True)</b>, <b>xaxis=XAxis(showgrid=True, text=None, tickinterval=12, type='hour', visible=True)</b>, <b>yaxis=YAxis(showgrid=True, text=None, visible=True)</b>, <b>legend=Legend(title=None)</b>, <b>options=Options(error_bars=True, height=550, hovermode='x unified', line_style=None, showgrid=False, showlegend=True, width=1500)</b>, <b>config=Config(displayLogo=False)</b>)
 
-> Parameters
+> Description
 
-<ul style='list-style: none'>
-        <li>
-            <b>displayLogo : <i> bool, default False</i></b>
-            <ul style="list-style: none">
-                <li>Display plotly.io logo on generated plots.</li>
-            </ul>
-        </li>
-    </ul>
+- Simplifies overriding plot defaults when using a Jupyter notebook template. `Config` will accept any of the dataclasses as arguments and apply the changes to all plots in a template.
+
+> Example
+
+```
+plot = TimeSeries(
+        config=Config(xaxis=XAxis(type='days'), circadian_info=CircadianInfo(highlight=False))
+        )
+```
+
+- Passing `xaxis=XAxis(type='days')` will set the x-axis labels for all plots to use the 'day' format
+- Passing `circadian_info=CircadianInfo(highlight=False)` will remove circadian highlighting from all plots
+
 <hr>
 
 ### Group
