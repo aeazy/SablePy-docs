@@ -5,7 +5,7 @@ The SablePy library leverages pandas and plotly libraries to provide a number of
 - Combine CSV files using [`sablepy.combine_csv_files`](#combine-csv-files)
 - Analyze CSV files using a number of methods provided by [`sablepy.Data`](/content/docs/data.md)
 - Create time series and bar plots using your data, with control over nearly every detail using [`sablepy.BarPlot`](/content/docs/barplot.md) and [`sablepy.TimeSeries`](/content/docs/timeseries.md)
-- Easily export data to a CSV, or plot to a PNG, using [`sablepy.export`]()
+- Easily export data to a CSV, or plot to a PNG, using [`sablepy.export`](/content/docs/export.md)
 - Streamline data visualization with Jupyter notebooks, which are made even easier using [`sablepy.new_notebook`](#create-a-new-jupyter-notebook-using-a-template)
 
 See the [Directory](#directory) for the full list of links to module documentation. Otherwise, see [Getting Started](#getting-started) to begin.
