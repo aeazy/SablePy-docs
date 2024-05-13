@@ -1,6 +1,6 @@
 # SablePy
 
-The SablePy library leverages pandas and plotly libraries to provide a number of tools to streamline your data analysis:
+The SablePy library leverages Pandas and Plotly libraries to provide a number of tools to streamline your data analysis:
 
 - Combine CSV files using [`sablepy.combine_csv_files`](#combine-csv-files)
 - Analyze CSV files using a number of methods provided by [`sablepy.Data`](/content/docs/data.md)
