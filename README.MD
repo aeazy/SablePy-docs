@@ -248,18 +248,18 @@ In `main.py`:
 
 1. Import the function to create a notebook from a template:
    ```
-   from sablepy import new_analysis
+   from sablepy import new_notebook
    ```
 2. Call the function:
 
    ```
-   from sablepy import new_analysis
+   from sablepy import new_notebook
 
    # Create a notebook from the standard template. The file created will be named 'standard_{datetime}.ipynb'
-   new_analysis(analysis='standard')
+   new_notebook(analysis='standard')
 
    # Optionally, you can provide your desired filename of the new notebook
-   new_analysis(analysis='standard', new_filename='example') # The notebook created will be named 'example.ipynb'
+   new_notebook(analysis='standard', new_filename='example') # The notebook created will be named 'example.ipynb'
    ```
 
 ## Directory
