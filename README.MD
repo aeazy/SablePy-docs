@@ -49,29 +49,26 @@ See the [Directory](#directory) for the full list of links to module documentati
      .venv\Scripts\activate
      ```
 
-4. Download the SablePy package:
+4. Download the SablePy package.
 
-   1. Navigate to [Releases](https://github.com/aeazy/SablePy/releases).
-   2. Under **Assets**, locate the .whl file and download it.
-
-5. Add the .whl file to the directory created in step 2. The directory should look something like this:
+5. Add the GNU zip (.gz) file to the directory created in step 2. The directory should look something like this:
 
    ```
     .
     ├── newProject
         ├── .venv
-        └── sablepy-24.x.x-py3-none-any.whl
+        └── sablepy-24.x.x-tar.gz
    ```
 
-6. Install the .whl file using a package manager (e.g., pip):
+6. Install the GZ file using a package manager (e.g., pip):
 
    ```
-   pip install sablepy-24.x.x-py3-none-any.whl
+   pip install sablepy-24.x.x-tar.gz
    ```
 
    - Note: You can install pip using the terminal. The command is `py -m pip install --upgrade pip`.
 
-7. After the .whl package is successfully installed, remove it from the directory.
+7. After the package is successfully installed, remove it from the directory.
 
 8. Create the directory for you to upload your csv files:
 
