@@ -4,30 +4,14 @@
 - [average_by_circadian_cycle](#average-by-circadian-cycle)
 - [calculate_cumulative_ee](#calculate-cumulative-ee)
 - [calculate_energy_balance](#calculate-energy-balance)
+- [calculate_cumulative_energy_balance](#calculate-cumulative-energy-balance)
 - [calculate_group_averages](#calculate-group-averages)
 - [calculate_hourly_intake](#calculate-hourly-intake)
 - [correct_behavior_data](#correct-behavior-data)
 - [cumsum_behavior_data](#cumsum-behavior-data)
+- [get_circadian_cycle](#get-circadian-cycle)
 - [inverse_cumsum](#inverse-cumsum)
 - [remove_outliers](#remove-outliers)
-<hr>
-
-<strong id='cumsum'>cumsum</strong>(<b>data</b>)
-
-> Description
-
-Cumulative sum of a column on the nth axis.
-
-> Parameters
-
-<ul style='list-style: none'>
-    <li>
-        <b>data : <i>sablepy.core.data.Data | pandas.core.frame.DataFrame</i></b>
-        <ul style='list-style: none'>
-            <li>sablepy.core.data.Data | pandas.core.frame.DataFrame</li>
-        </ul>
-    </li>
-</ul>
 
 <hr>
 
@@ -194,6 +178,25 @@ Used by `sablepy.Combine` when combining multiple csv files where behavior data 
 
 <hr>
 
+<strong id='cumsum'>cumsum</strong>(<b>data</b>)
+
+> Description
+
+Cumulative sum of a column on the nth axis.
+
+> Parameters
+
+<ul style='list-style: none'>
+    <li>
+        <b>data : <i>sablepy.core.data.Data | pandas.core.frame.DataFrame</i></b>
+        <ul style='list-style: none'>
+            <li>sablepy.core.data.Data | pandas.core.frame.DataFrame</li>
+        </ul>
+    </li>
+</ul>
+
+<hr>
+
 <strong id='cumsum-behavior-data'>cumsum_behavior_data</strong>(<b>df</b>)
 
 > Description
@@ -207,6 +210,39 @@ Used by `sablepy.Combine` after the cumulative difference is found using [`corre
         <b>df : <i>sablepy.core.data.Data | pandas.core.frame.DataFrame</i></b>
         <ul style='list-style: none'>
             <li>sablepy.Data or pandas.DataFrame</li>
+        </ul>
+    </li>
+</ul>
+
+<hr>
+
+<strong id='get-circadian-cycle'>get_circadian_cycle</strong>(<b>df</b>, <b>light_or_dark</b><i>=\_NoDefault.no_default</i>, <b>start_hr</b><i>=\_NoDefault.no_default</i>, <b>end_hr</b><i>=\_NoDefault.no_default</i>)
+
+> Parameters
+
+<ul style='list-style: none'>
+    <li>
+        <b>df : <i>sablepy.core.data.Data | pandas.core.frame.DataFrame</i></b>
+        <ul style='list-style: none'>
+            <li>sablepy.Data or pandas.DataFrame object where index dtype is in datetime format.</li>
+        </ul>
+    </li>
+    <li>
+        <b>light_or_dark : <i>str, optional</i></b>
+        <ul style='list-style: none'>
+            <li>String expression defining if the circadian cycle is 'light' or 'dark'.</li>
+        </ul>
+    </li>
+    <li>
+        <b>start_hr : <i>int, optional</i></b>
+        <ul style='list-style: none'>
+            <li>Integer representation of cycle start in 24-hr format (e.g., <code>start_hr=6</code> is 6:00 AM).</li>
+        </ul>
+    </li>
+    <li>
+        <b>end_hr : <i>int, optional</i></b>
+        <ul style='list-style: none'>
+            <li>Integer representation of cycle end in 24-hr format (e.g., <code>end_hr=18</code> is 6:00 PM).</li>
         </ul>
     </li>
 </ul>
