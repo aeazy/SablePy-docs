@@ -1,3 +1,8 @@
+## sablepy.Summary
+
+- [Parameters](#get-summary)
+- [Examples](#examples)
+
 <strong id='get-summary'>get_summary</strong>(<b>new_filename</b>, <b>new_filetype</b><i>='pdf'</i>, <b>export_filepath</b><i>=\_NoDefault.no_default</i>, <b>file</b><i>=\_NoDefault.no_default</i>, <b>data</b><i>=\_NoDefault.no_default</i>, <b>all_plots</b><i>=True</i>, <b>plots</b><i>=\_NoDefault.no_default</i>)
 
 > Parameters
@@ -48,3 +53,42 @@
         </ul>
     </li>
 </ul>
+
+#### Examples
+
+- [Generating a PDF](#generating-a-pdf-file)
+- [Generating a HTML](#generating-a-html-file)
+- [Specifying plots](#specifying-plots-to-generate)
+
+##### Generating a PDF file
+
+```
+get_summary(
+    new_filename='example',
+    data=data
+)
+```
+
+##### Generating a HTML file:
+
+```
+get_summary(
+    new_filename='example',
+    new_filetype='html',
+    data=data
+)
+```
+
+##### Specifying plots to generate
+
+```
+get_summary(
+    new_filename='example',
+    data=data,
+    plots='respirometry'
+)
+```
+
+- `plots='respirometry'` would generate plots for VO2, VCO2, RQ, Energy Expenditure, and Energy Balance. 
+- `plots='behavior'` would generate plots for Food and Water Consumption, Body Mass, and Total Distance Travelled.
+- Alternatively, specifying `plots=['foodina', 'rq']` would generate plots for Food Consumption and Respiratory Quotient only.
