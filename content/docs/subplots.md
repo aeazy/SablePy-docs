@@ -158,8 +158,6 @@
 
 #### Basic Usage
 
-<div style="display:flex">
-
 ```
 d = Data("example")
 
@@ -172,9 +170,6 @@ vco2_plot = TimeSeries(vco2)
 sp = make_subplot([vo2_plot, vco2_plot])
 ```
 
-</div>
-<div style="display:flex">
-
-![subplot-basic](../images/subplot/subplot-basic.png)
-
-</div>
+<p align="center">
+<img src="../images/subplot/subplot-basic.png" />
+</p>
