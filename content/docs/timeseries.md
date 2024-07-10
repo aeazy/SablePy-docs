@@ -7,6 +7,7 @@
   - [Circadian Highlights](#circadian-highlighting)
   - [Titles](#titles)
   - [Options](#options)
+  - [Annotations](#annotations)
 - [Export](#export)
 
 <strong id='timeseries'>TimeSeries</strong>(<b>data</b>, <b>circadian_info=CircadianInfo(highlight=True, light_start=6, dark_start=18)</b>, <b>title=Title(text=None, size=18, visible=True)</b>, <b>xaxis=XAxis(showgrid=True, text=None, tickinterval=12, type='hour', visible=True)</b>, <b>yaxis=YAxis(showgrid=True, text=None, visible=True)</b>, <b>legend=Legend(title=None)</b>, <b>options=Options(error_bars=True, height=550, hovermode='x unified', line_style=None, showgrid=False, showlegend=True, width=1500)</b>, <b>config=Config(displayLogo=False)</b>)
@@ -74,7 +75,9 @@ plot = TimeSeries(vo2_df)
 plot.show()
 ```
 
-![Timeseries-individual](../images/timeseries/timeseries-individual.png)
+<p align='center'>
+<img src="../images/timeseries/timeseries-individual.png" />
+</p>
 
 #### Average by group before creating plot:
 
@@ -87,7 +90,9 @@ plot = TimeSeries(vo2_df)
 plot.show()
 ```
 
-![Timeseries-group](../images/timeseries/timeseries-group.png)
+<p align='center'>
+<img src="../images/timeseries/timeseries-group.png" />
+</p>
 
 #### Customizing the plot:
 
@@ -100,14 +105,20 @@ plot.show()
     plot.show()
     ```
 
-    ![Timeseries-custom-circadian](../images/timeseries/timeseries-custom-circadian.png)
+<p align='center'>
+<img src="../images/timeseries/timeseries-custom-circadian.png" />
+</p>
 
-  - Remove highlights:
-    ```
-    plot = TimeSeries(vo2_df, circadian_info=CircadianInfo(False))
-    plot.show()
-    ```
-    ![Timeseries-no-circadian](../images/timeseries/timeseries-no-circadian.png)
+- Remove highlights:
+
+  ```
+  plot = TimeSeries(vo2_df, circadian_info=CircadianInfo(False))
+  plot.show()
+  ```
+
+    <p align='center'>
+    <img src="../images/timeseries/timeseries-no-circadian.png" />
+    </p>
 
 - ##### Titles:
 
@@ -124,22 +135,73 @@ plot.show()
   )
   ```
 
-  ![timeseries-custom-titles](../images/timeseries/timeseries-custom-titles.png)
+    <p align='center'>
+    <img src="../images/timeseries/timeseries-custom-titles.png" />
+    </p>
 
 - ##### Options:
+
   - Disable error bars display
   - Modify color and style of lines in the plot
+
   ```
   plot = TimeSeries(
   vo2_df,
   options=Options(error_bars=False, line_style={'G3':Line(color='black', dash='dashdot')})
   )
   ```
-  ![timeseries-custom-options](../images/timeseries/timeseries-custom-options.png)
+
+    <p align='center'>
+    <img src="../images/timeseries/timeseries-custom-options.png" />
+    </p>
+
+- ##### Annotations
+
+  - Adding text annotations using `add_annotation`:
+
+    ```
+    plot = TimeSeries(df)
+    plot.add_annotation("Annotation #1", x=6)
+    plot.add_annotation("Annotation #2", x=12, showarrow=False)
+    plot.add_annotation("Annotation #3", x=18, yshift=20, showarrow=False)
+    plot.add_annotation("Annotation #4", x=24, arrowcolor='red', textcolor='red')
+    ```
+
+    <p align='center'>
+    <img src="../images/timeseries/timeseries-addAnnotation.png" />
+    </p>
+
+    - Add vertical lines using `add_vline`:
+
+    ```
+    plot.add_vline(12)
+    plot.add_vline(18,  label="Label #1", line_color='red', textcolor='red')
+    plot.add_vline(24,  line_color='red', line_dash='dash')
+    ```
+
+    <p align='center'>
+    <img src="../images/timeseries/timeseries-addVLine.png" />
+    </p>
+
+    - Add horizontal lines using `add_hline`:
+
+    ```
+    plot = TimeSeries(df)
+    plot.add_hline(y="max", label="Max", align_label="right")
+    plot.add_hline(y="mean", label="Mean", line_color="red", textcolor="red", line_width=2)
+    plot.add_hline(y="min", label="Min", line_dash="dash")
+    plot.add_hline(y=2.4, label="Defined Y", yshift=-1, xshift=100, showarrow=True)
+    ```
+
+    <p align='center'>
+    <img src="../images/timeseries/timeseries-addHLine.png" />
+    </p>
+
+    - See [the docs](../docs/annotations.md) for more information!s
 
 #### Export
 
-- All data and plots created using `sablepy` can easily be exported using `sablepy.export`:
+- All data and plots created using `sablepy` can be exported using `sablepy.export`:
 
   ```
   plot = TimeSeries(vo2_df)

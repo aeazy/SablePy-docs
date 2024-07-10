@@ -4,7 +4,7 @@
 - [`add_hline`](#add-hline)
 - [`add_vline`](#add-vline)
 
-<strong id='add-annotation'>add_annotation</strong>(<b>text</b>, <b>x</b>, <b>y</b><i>=1</i>, <b>xref</b><i>='x'</i>, <b>yref</b><i>="paper"</i>, <b>showarrow</b><i>=True</i>, <b>xshift</b><i>=\_NoDefault.no_default</i>, <b>yshift</b><i>=\_NoDefault.no_default</i>)
+<strong id='add-annotation'>add_annotation</strong>(<b>text</b>, <b>x</b>, <b>y</b><i>=1</i>, <b>xref</b><i>='x'</i>, <b>yref</b><i>="paper"</i>, <b>showarrow</b><i>=True</i>, <b>xshift</b><i>=\_NoDefault.no_default</i>, <b>yshift</b><i>=\_NoDefault.no_default</i>, <b>textcolor</b><i>=\_NoDefault.no_default</i>, <b>arrowcolor</b><i>=\_NoDefault.no_default</i>)
 
 Add a text annotation to a plot.
 
@@ -74,9 +74,83 @@ Add a text annotation to a plot.
 		</ul>
 	</li>
 </ul>
+<ul style='list-style: none'>
+	<li id='add_annotation-textcolor'>
+		<b>textcolor : <i>str, optional</i></b>
+		<ul style='list-style: none'>
+			<li id='add_annotation-textcolor-description'>String expression of annotation text color.</li>
+		</ul>
+	</li>
+</ul>
+<ul style='list-style: none'>
+	<li id='add_annotation-arrowcolor'>
+		<b>arrowcolor : <i>str, optional</i></b>
+		<ul style='list-style: none'>
+			<li id='add_annotation-arrowcolor-description'>String expression of annotation arrow color.</li>
+		</ul>
+	</li>
+</ul>
 
 <hr>
-<strong id='add-hline'>add_hline</strong>(<b>x</b><i>=0.0</i>, <b>y</b>, <b>label</b><i>=_NoDefault.no_default</i>, <b>align_label</b><i>=_NoDefault.no_default</i>, <b>line_color</b><i>='black'</i>, <b>line_dash</b><i>='solid'</i>, <b>line_opacity</b><i>=1.0</i>, <b>line_width</b><i>=1</i>, <b>showarrow</b><i>=False</i>, <b>xshift</b><i>=0</i>, <b>yshift</b><i>=10</i>)
+
+<strong id='add-vline'>add_vline</strong>(<b>x</b>, <b>line_color</b><i>='black'</i>, <b>line_dash</b><i>='solid'</i>, <b>line_opacity</b><i>=1.0</i>, <b>line_width</b><i>=1</i>, <b>textcolor</b><i>=\_NoDefault.no_default</i>)
+
+Add a vertical line to a plot.
+
+> Parameters
+
+<ul style='list-style: none'>
+	<li id='add_vline-x'>
+		<b>x : <i>str | int</i></b>
+		<ul style='list-style: none'>
+			<li id='add_vline-x-description'>Annotation's x position. X position can be defined as a string expression matching the x-axis label or as an integer representing the hour or day.</li>
+		</ul>
+	</li>
+</ul>
+<ul style='list-style: none'>
+	<li id='add_vline-line_color'>
+		<b>line_color : <i>str, default 'black'</i></b>
+		<ul style='list-style: none'>
+			<li id='add_vline-line_color-description'>String expression of color.</li>
+		</ul>
+	</li>
+</ul>
+<ul style='list-style: none'>
+	<li id='add_vline-line_dash'>
+		<b>line_dash : <i>str, default 'solid'</i></b>
+		<ul style='list-style: none'>
+			<li id='add_vline-line_dash-description'>String expression of line dash style. Arguments include 'solid', 'dash', or 'dashdot'.</li>
+		</ul>
+	</li>
+</ul>
+<ul style='list-style: none'>
+	<li id='add_vline-line_opacity'>
+		<b>line_opacity : <i>float, default 1.0</i></b>
+		<ul style='list-style: none'>
+			<li id='add_vline-line_opacity-description'>Float representation of line opacity.</li>
+		</ul>
+	</li>
+</ul>
+<ul style='list-style: none'>
+	<li id='add_vline-line_width'>
+		<b>line_width : <i>int | float, default 1</i></b>
+		<ul style='list-style: none'>
+			<li id='add_vline-line_width-description'>Integer or float representation of line width.</li>
+		</ul>
+	</li>
+</ul>
+<ul style='list-style: none'>
+	<li id='add_vline-textcolor'>
+		<b>textcolor : <i>str, optional</i></b>
+		<ul style='list-style: none'>
+			<li id='add_vline-textcolor-description'>String expression of annotation label color.</li>
+		</ul>
+	</li>
+</ul>
+
+<hr>
+
+<strong id='add-hline'>add_hline</strong>(<b>x</b><i>=0.0</i>, <b>y</b>, <b>label</b><i>=\_NoDefault.no_default</i>, <b>align_label</b><i>=\_NoDefault.no_default</i>, <b>line_color</b><i>='black'</i>, <b>line_dash</b><i>='solid'</i>, <b>line_opacity</b><i>=1.0</i>, <b>line_width</b><i>=1</i>, <b>showarrow</b><i>=False</i>, <b>xshift</b><i>=0</i>, <b>yshift</b><i>=10</i>, <b>textcolor</b><i>=\_NoDefault.no_default</i>)
 
 Add a horizontal line to a plot.
 
@@ -170,52 +244,11 @@ Add a horizontal line to a plot.
 		</ul>
 	</li>
 </ul>
-
-<hr>
-
-<strong id='add-vline'>add_vline</strong>(<b>x</b>, <b>line_color</b><i>='black'</i>, <b>line_dash</b><i>='solid'</i>, <b>line_opacity</b><i>=1.0</i>, <b>line_width</b><i>=1</i>)
-
-Add a vertical line to a plot.
-
-> Parameters
-
 <ul style='list-style: none'>
-	<li id='add_vline-x'>
-		<b>x : <i>str | int</i></b>
+	<li id='add_hline-textcolor'>
+		<b>textcolor : <i>str, optional</i></b>
 		<ul style='list-style: none'>
-			<li id='add_vline-x-description'>Annotation's x position. X position can be defined as a string expression matching the x-axis label or as an integer representing the hour or day.</li>
-		</ul>
-	</li>
-</ul>
-<ul style='list-style: none'>
-	<li id='add_vline-line_color'>
-		<b>line_color : <i>str, default 'black'</i></b>
-		<ul style='list-style: none'>
-			<li id='add_vline-line_color-description'>String expression of color.</li>
-		</ul>
-	</li>
-</ul>
-<ul style='list-style: none'>
-	<li id='add_vline-line_dash'>
-		<b>line_dash : <i>str, default 'solid'</i></b>
-		<ul style='list-style: none'>
-			<li id='add_vline-line_dash-description'>String expression of line dash style. Arguments include 'solid', 'dash', or 'dashdot'.</li>
-		</ul>
-	</li>
-</ul>
-<ul style='list-style: none'>
-	<li id='add_vline-line_opacity'>
-		<b>line_opacity : <i>float, default 1.0</i></b>
-		<ul style='list-style: none'>
-			<li id='add_vline-line_opacity-description'>Float representation of line opacity.</li>
-		</ul>
-	</li>
-</ul>
-<ul style='list-style: none'>
-	<li id='add_vline-line_width'>
-		<b>line_width : <i>int | float, default 1</i></b>
-		<ul style='list-style: none'>
-			<li id='add_vline-line_width-description'>Integer or float representation of line width.</li>
+			<li id='add_hline-textcolor-description'>String expression of annotation label color.</li>
 		</ul>
 	</li>
 </ul>
