@@ -24,43 +24,43 @@
     <li>
         <b>circadian_info=CircadianInfo(highlight=True, light_start=6, dark_start=18) : <i>type</i></b>
         <ul style='list-style: none'>
-            <li>Expects <code>sablepy.CircadianInfo</code> dataclass. See the <a href="https://github.com/aeazy/SablePy/blob/main/sablepy/content/docs/dataclasses.md#circadianinfo">CircadianInfo documentation</a> for more information.</li>
+            <li>Expects <code>sablepy.CircadianInfo</code> dataclass. See the <a href="../docs/dataclasses.md">CircadianInfo documentation</a> for more information.</li>
         </ul>
     </li>
     <li>
         <b>title : <i>Title, default Title(text=None, size=18, visible=True)</i></b>
         <ul style='list-style: none'>
-            <li>Expects <code>sablepy.Title</code> dataclass. See the <a href="https://github.com/aeazy/SablePy/blob/main/sablepy/content/docs/dataclasses.md#title">Title documentation</a> for more information.</li>
+            <li>Expects <code>sablepy.Title</code> dataclass. See the <a href="../docs/dataclasses.md">Title documentation</a> for more information.</li>
         </ul>
     </li>
     <li>
         <b>xaxis : <i>XAxis, default XAxis(showgrid=True, text=None, tickinterval=12, type='hour', visible=True)</i></b>
         <ul style='list-style: none'>
-            <li>Expects <code>sablepy.XAxis</code> dataclass. See the <a href="https://github.com/aeazy/SablePy/blob/main/sablepy/content/docs/dataclasses.md#xaxis"> documentation</a> for more information.</li>
+            <li>Expects <code>sablepy.XAxis</code> dataclass. See the <a href="../docs/dataclasses.md"> documentation</a> for more information.</li>
         </ul>
     </li>
     <li>
         <b>yaxis : <i>YAxis, default YAxis(showgrid=True, text=None, visible=True)</i></b>
         <ul style='list-style: none'>
-            <li>Expects <code>sablepy.YAxis</code> dataclass. See the <a href="https://github.com/aeazy/SablePy/blob/main/sablepy/content/docs/dataclasses.md#yaxis"> YAxis documentation</a> for more information.</li>
+            <li>Expects <code>sablepy.YAxis</code> dataclass. See the <a href="../docs/dataclasses.md"> YAxis documentation</a> for more information.</li>
         </ul>
     </li>
     <li>
         <b>legend : <i>Legend, default Legend(title=None)</i></b>
         <ul style='list-style: none'>
-            <li>Expects <code>sablepy.Legend</code> dataclass. See the <a href="https://github.com/aeazy/SablePy/blob/main/sablepy/content/docs/dataclasses.md#legend"> Legend documentation</a> for more information.</li>
+            <li>Expects <code>sablepy.Legend</code> dataclass. See the <a href="../docs/dataclasses.md"> Legend documentation</a> for more information.</li>
         </ul>
     </li>
     <li>
         <b>options : <i>Options, default Options(error_bars=True, height=550, hovermode='x unified', line_style=None, showgrid=False, showlegend=True, width=1500)</i></b>
         <ul style='list-style: none'>
-            <li>Expects <code>sablepy.Options</code> dataclass. See the <a href="https://github.com/aeazy/SablePy/blob/main/sablepy/content/docs/dataclasses.md#options"> Options documentation</a> for more information.</li>
+            <li>Expects <code>sablepy.Options</code> dataclass. See the <a href="../docs/dataclasses.md"> Options documentation</a> for more information.</li>
         </ul>
     </li>
     <li>
         <b>config : <i>Config, default Config(displayLogo=False)</i></b>
         <ul style='list-style: none'>
-            <li>Expects <code>sablepy.Config</code> dataclass. See the <a href="https://github.com/aeazy/SablePy/blob/main/sablepy/content/docs/dataclasses.md#config"> Config documentation</a> for more information.</li>
+            <li>Expects <code>sablepy.Config</code> dataclass. See the <a href="../docs/dataclasses.md"> Config documentation</a> for more information.</li>
         </ul>
     </li>
 </ul>

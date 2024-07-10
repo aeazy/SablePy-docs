@@ -14,25 +14,25 @@
     <li>
         <b>data : <i>sablepy.core.data.Data</i></b>
         <ul style='list-style: none'>
-            <li><code>pandas.DataFrame</code> formatted specifically using <code>sablepy.average_by_circadian_cycle</code>. See the <a href="https://github.com/aeazy/SablePy/blob/main/sablepy/content/docs/math.md#average_by_circadian_cycle">documentation</a> for more information.</li>
+            <li><code>pandas.DataFrame</code> formatted specifically using <code>sablepy.average_by_circadian_cycle</code>. See the <a href="../docs/math.md">documentation</a> for more information.</li>
         </ul>
     </li>
     <li>
         <b>title : <i>Title, default Title(text=None, size=18, visible=True)</i></b>
         <ul style='list-style: none'>
-            <li>Expects <code>sablepy.Title</code> dataclass. See the <a href="../docs/dataclasses.md#title">Title documentation</a> for more information.</li>
+            <li>Expects <code>sablepy.Title</code> dataclass. See the <a href="../docs/dataclasses.md">Title documentation</a> for more information.</li>
         </ul>
     </li>
     <li>
         <b>xaxis : <i>XAxis, default XAxis(showgrid=True, text='', tickinterval=12, type='hour', visible=True)</i></b>
         <ul style='list-style: none'>
-            <li>Expects <code>sablepy.XAxis</code> dataclass. See the <a href="https://github.com/aeazy/SablePy/blob/main/sablepy/content/docs/dataclasses.md#xaxis">XAxis documentation</a> for more information.</li>
+            <li>Expects <code>sablepy.XAxis</code> dataclass. See the <a href="../docs/dataclasses.md">XAxis documentation</a> for more information.</li>
         </ul>
     </li>
     <li>
         <b>yaxis : <i>YAxis, default YAxis(showgrid=True, text=None, visible=True)</i></b>
         <ul style='list-style: none'>
-            <li>Expects <code>sablepy.YAxis</code> dataclass. See the <a href="https://github.com/aeazy/SablePy/blob/main/sablepy/content/docs/dataclasses.md#yaxis">YAxis documentation</a> for more information.</li>
+            <li>Expects <code>sablepy.YAxis</code> dataclass. See the <a href="../docs/dataclasses.md">YAxis documentation</a> for more information.</li>
         </ul>
     </li>
 </ul>
