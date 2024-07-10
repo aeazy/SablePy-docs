@@ -20,7 +20,7 @@
     <li>
         <b>title : <i>Title, default Title(text=None, size=18, visible=True)</i></b>
         <ul style='list-style: none'>
-            <li>Expects <code>sablepy.Title</code> dataclass. See the <a href="https://github.com/aeazy/SablePy/blob/main/sablepy/content/docs/dataclasses.md#title">Title documentation</a> for more information.</li>
+            <li>Expects <code>sablepy.Title</code> dataclass. See the <a href="../docs/dataclasses.md#title">Title documentation</a> for more information.</li>
         </ul>
     </li>
     <li>
