@@ -202,14 +202,14 @@ plot = TimeSeries(
   </li>
 
   <li>
-    <b>height : <i> int, default 550'</i></b>
+    <b>height : <i> int, default 550</i></b>
     <ul style="list-style: none">
       <li>Integer value of the height of the plot. Default <code>height=550</code> ensures all 16 lines are shown properly in the legend.</li>
     </ul>
   </li>
 
   <li>
-    <b>hovermode : <i> str, default 'x unified</i></b>
+    <b>hovermode : <i> str, default 'x unified'</i></b>
     <ul style="list-style: none">
       <li>Tooltip display when hovering over a plot. Other arguments include 'x' or False to disable the tooltip entirely.</li>
     </ul>
@@ -239,7 +239,7 @@ plot = TimeSeries(
   <li>
     <b>width : <i> int, default 1500</i></b>
     <ul style="list-style: none">
-      <li>Integer value of the width of the plot.</li>
+      <li>Integer value of the width of the plot. If <code>width=None</code>, the width is automatically determined.</li>
     </ul>
   </li>
 </ul>
