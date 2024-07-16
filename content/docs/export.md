@@ -1,3 +1,7 @@
+## sablepy.Export
+- [Parameters](#export)
+- [Examples](#example)
+
 <strong id='export'>export</strong>(<b>data</b><i>=\_NoDefault.no_default</i>, <b>new_filename</b><i>=\_NoDefault.no_default</i>, <b>export_path</b><i>=\_NoDefault.no_default</i>)
 
 > Parameters
@@ -22,3 +26,8 @@
         </ul>
     </li>
 </ul>
+
+### Example
+- Basic usage:
+    ```
+    plot = 

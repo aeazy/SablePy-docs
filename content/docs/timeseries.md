@@ -6,14 +6,15 @@
   - [`set_xaxis_title`](#set-xaxis-title)
   - [`set_yaxis_title`](#set-yaxis-title)
   - [`set_legend_title`](#set-legend-title)
-- [Individual Cage Data](#creating-plot-for-individual-cages)
-- [Group Cage Data](#average-by-group-before-creating-plot)
-- [Plot Customization](#customizing-the-plot)
-  - [Circadian Highlights](#circadian-highlighting)
-  - [Titles](#titles)
-  - [Options](#options)
-  - [Annotations](#annotations)
-- [Export](#export)
+- Examples:
+    - [Individual Cage Data](#creating-plot-for-individual-cages)
+    - [Group Cage Data](#average-by-group-before-creating-plot)
+    - [Plot Customization](#customizing-the-plot)
+        - [Circadian Highlights](#circadian-highlighting)
+        - [Titles](#titles)
+        - [Options](#options)
+        - [Annotations](#annotations)
+    - [Export](#export)
 
 <hr>
 
