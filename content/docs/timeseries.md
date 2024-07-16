@@ -1,6 +1,11 @@
 ## sablepy.TimeSeries
 
 - [Parameters](#timeseries)
+- Methods:
+  - [`set_plot_title`](#set-plot-title)
+  - [`set_xaxis_title`](#set-xaxis-title)
+  - [`set_yaxis_title`](#set-yaxis-title)
+  - [`set_legend_title`](#set-legend-title)
 - [Individual Cage Data](#creating-plot-for-individual-cages)
 - [Group Cage Data](#average-by-group-before-creating-plot)
 - [Plot Customization](#customizing-the-plot)
@@ -9,6 +14,10 @@
   - [Options](#options)
   - [Annotations](#annotations)
 - [Export](#export)
+
+<hr>
+
+### Parameters
 
 <strong id='timeseries'>TimeSeries</strong>(<b>data</b>, <b>circadian_info=CircadianInfo(highlight=True, light_start=6, dark_start=18)</b>, <b>title=Title(text=None, size=18, visible=True)</b>, <b>xaxis=XAxis(showgrid=True, text=None, tickinterval=12, type='hour', visible=True)</b>, <b>yaxis=YAxis(showgrid=True, text=None, visible=True)</b>, <b>legend=Legend(title=None)</b>, <b>options=Options(error_bars=True, height=550, hovermode='x unified', line_style=None, showgrid=False, showlegend=True, width=1500)</b>, <b>config=Config(displayLogo=False)</b>)
 
@@ -64,6 +73,76 @@
         </ul>
     </li>
 </ul>
+
+### Methods
+
+<strong id='set-title'>set_title</strong>(<b>text</b>)
+
+Updates the plot's title.
+
+> Parameters
+
+<ul style='list-style: none'>
+	<li id='set_title-text'>
+		<b>text : <i>str</i></b>
+		<ul style='list-style: none'>
+			<li id='set_title-text-description'>String expression representing the plot title's text.</li>
+		</ul>
+	</li>
+</ul>
+
+<hr>
+
+<strong id='set-xaxis-title'>set_xaxis_title</strong>(<b>text</b>)
+
+Updates the plot's x-axis title.
+
+> Parameters
+
+<ul style='list-style: none'>
+	<li id='set_xaxis_title-text'>
+		<b>text : <i>str</i></b>
+		<ul style='list-style: none'>
+			<li id='set_xaxis_title-text-description'>String expression representing the x-axis title's text.</li>
+		</ul>
+	</li>
+</ul>
+
+<hr>
+
+<strong id='set-yaxis-title'>set_yaxis_title</strong>(<b>text</b>)
+
+Updates the plot's y-axis title.
+
+> Parameters
+
+<ul style='list-style: none'>
+	<li id='set_yaxis_title-text'>
+		<b>text : <i>str</i></b>
+		<ul style='list-style: none'>
+			<li id='set_yaxis_title-text-description'>String expression representing the y-axis title's text.</li>
+		</ul>
+	</li>
+</ul>
+
+<hr>
+
+<strong id='set-legend-title'>set_legend_title</strong>(<b>text</b>)
+
+Updates the plot's legend title.
+
+> Parameters
+
+<ul style='list-style: none'>
+	<li id='set_legend_title-text'>
+		<b>text : <i>str</i></b>
+		<ul style='list-style: none'>
+			<li id='set_legend_title-text-description'>String expression representing the legend title's text.</li>
+		</ul>
+	</li>
+</ul>
+
+<hr>
 
 #### Creating plot for individual cages:
 
