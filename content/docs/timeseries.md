@@ -49,7 +49,7 @@
     <li>
         <b>xaxis : <i>XAxis, default XAxis(showgrid=True, text=None, tickinterval=12, type='hour', visible=True)</i></b>
         <ul style='list-style: none'>
-            <li>Expects <code>sablepy.XAxis</code> dataclass. See the <a href="../docs/dataclasses.md"> documentation</a> for more information.</li>
+            <li>Expects <code>sablepy.XAxis</code> dataclass. See the <a href="../docs/dataclasses.md"> XAxis documentation</a> for more information.</li>
         </ul>
     </li>
     <li>
@@ -147,7 +147,6 @@ Updates the plot's legend title.
 
 <hr>
 
-
 <strong id='set-title'>set_title</strong>(<b>text</b>)
 
 Updates the plot's title.
@@ -198,7 +197,6 @@ Updates the plot's y-axis title.
 </ul>
 
 <hr>
-
 
 #### Creating plot for individual cages:
 
