@@ -277,13 +277,13 @@ plot = TimeSeries(
 
 ### XAxis
 
-<strong id="x-axis">XAxis</strong>(<b>showgrid</b>=<i>True</i>, <b>text</b>=<i>None</i>, <b>tickinterval</b>=<i>12</i>, <b>type</b>=<i>'hour'</i>, <b>visible</b>=<i>True</i>)
+<strong id="x-axis">XAxis</strong>(<b>showgrid</b>=<i>False</i>, <b>text</b>=<i>None</i>, <b>tickinterval</b>=<i>12</i>, <b>type</b>=<i>'hour'</i>, <b>visible</b>=<i>True</i>)
 
 > Parameters
 
 <ul style="list-style: none">
   <li>
-    <b>showgrid : <i> bool, default True</i></b>
+    <b>showgrid : <i> bool, default False</i></b>
     <ul style="list-style: none">
       <li>Show X-axis gridline.</li>
     </ul>
@@ -321,13 +321,13 @@ plot = TimeSeries(
 
 ### YAxis
 
-<strong id="y-axis">YAxis</strong>(<b>showgrid</b>=<i>True</i>, <b>text</b>=<i>None</i>, <b>visible</b>=<i>True</i>)
+<strong id="y-axis">YAxis</strong>(<b>showgrid</b>=<i>False</i>, <b>text</b>=<i>None</i>, <b>visible</b>=<i>True</i>)
 
 > Parameters
 
 <ul style="list-style: none">
   <li>
-    <b>showgrid : <i> bool, default True</i></b>
+    <b>showgrid : <i> bool, default False</i></b>
     <ul style="list-style: none">
       <li>Show Y-axis gridline.</li>
     </ul>
