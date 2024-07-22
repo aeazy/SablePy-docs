@@ -3,10 +3,11 @@
 - [Parameters](#timeseries)
 - Methods:
   - [`append_data`](#append-data)
-  - [`set_plot_title`](#set-plot-title)
+  - [`set_circadian`](#set-circadian)
+  - [`set_legend_title`](#set-legend-title)
+  - [`set_title`](#set-plot-title)
   - [`set_xaxis_title`](#set-xaxis-title)
   - [`set_yaxis_title`](#set-yaxis-title)
-  - [`set_legend_title`](#set-legend-title)
 - Examples:
   - [Individual Cage Data](#creating-plot-for-individual-cages)
   - [Group Cage Data](#average-by-group-before-creating-plot)
@@ -48,7 +49,7 @@
     <li>
         <b>xaxis : <i>XAxis, default XAxis(showgrid=True, text=None, tickinterval=12, type='hour', visible=True)</i></b>
         <ul style='list-style: none'>
-            <li>Expects <code>sablepy.XAxis</code> dataclass. See the <a href="../docs/dataclasses.md"> documentation</a> for more information.</li>
+            <li>Expects <code>sablepy.XAxis</code> dataclass. See the <a href="../docs/dataclasses.md"> XAxis documentation</a> for more information.</li>
         </ul>
     </li>
     <li>
@@ -104,6 +105,48 @@ Append data to sablepy.TimeSeries.fig.
 
 <hr>
 
+<strong id='set-circadian'>set_circadian</strong>(<b>light_start</b>, <b>dark_start</b>)
+
+Update the plot's circadian highlighting.
+
+> Parameters
+
+<ul style='list-style: none'>
+	<li id='set_circadian-light_start'>
+		<b>light_start : <i>int</i></b>
+		<ul style='list-style: none'>
+			<li id='set_circadian-light_start-description'>Integer value representing when lights turn on.</li>
+		</ul>
+	</li>
+</ul>
+<ul style='list-style: none'>
+	<li id='set_circadian-dark_start'>
+		<b>dark_start : <i>int</i></b>
+		<ul style='list-style: none'>
+			<li id='set_circadian-dark_start-description'>Integer value representing when lights turn off.</li>
+		</ul>
+	</li>
+</ul>
+
+<hr>
+
+<strong id='set-legend-title'>set_legend_title</strong>(<b>text</b>)
+
+Updates the plot's legend title.
+
+> Parameters
+
+<ul style='list-style: none'>
+	<li id='set_legend_title-text'>
+		<b>text : <i>str</i></b>
+		<ul style='list-style: none'>
+			<li id='set_legend_title-text-description'>String expression representing the legend title's text.</li>
+		</ul>
+	</li>
+</ul>
+
+<hr>
+
 <strong id='set-title'>set_title</strong>(<b>text</b>)
 
 Updates the plot's title.
@@ -149,23 +192,6 @@ Updates the plot's y-axis title.
 		<b>text : <i>str</i></b>
 		<ul style='list-style: none'>
 			<li id='set_yaxis_title-text-description'>String expression representing the y-axis title's text.</li>
-		</ul>
-	</li>
-</ul>
-
-<hr>
-
-<strong id='set-legend-title'>set_legend_title</strong>(<b>text</b>)
-
-Updates the plot's legend title.
-
-> Parameters
-
-<ul style='list-style: none'>
-	<li id='set_legend_title-text'>
-		<b>text : <i>str</i></b>
-		<ul style='list-style: none'>
-			<li id='set_legend_title-text-description'>String expression representing the legend title's text.</li>
 		</ul>
 	</li>
 </ul>
