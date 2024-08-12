@@ -51,6 +51,49 @@ Export dataframes or plots to csv files or png files, respectively.
 	</li>
 </ul>
 
+<hr>
+
+### Methods
+
+<strong id='export-to-prism'>export_to_prism</strong>(<b>data</b>, <b>groups</b><i>=\_NoDefault.no_default</i>, <b>filename</b><i>=\_NoDefault.no_default</i>, <b>export_path</b><i>=\_NoDefault.no_default</i>)
+
+Export a <code>sablepy.Data</code> object to a csv file formatted for Prism.
+
+> Parameters
+
+<ul style='list-style: none'>
+	<li id='export_to_prism-data'>
+		<b>data : <i>Data</i></b>
+		<ul style='list-style: none'>
+			<li id='export_to_prism-data-description'>A <code>sablepy.Data</code> object.</li>
+		</ul>
+	</li>
+</ul>
+<ul style='list-style: none'>
+	<li id='export_to_prism-groups'>
+		<b>groups : <i>list[Group], optional</i></b>
+		<ul style='list-style: none'>
+			<li id='export_to_prism-groups-description'>List of <code>sablepy.dataclasses.Group</code> objects.</li>
+		</ul>
+	</li>
+</ul>
+<ul style='list-style: none'>
+	<li id='export_to_prism-filename'>
+		<b>filename : <i>str | None, optional</i></b>
+		<ul style='list-style: none'>
+			<li id='export_to_prism-filename-description'>String expression representing desired filename.</li>
+		</ul>
+	</li>
+</ul>
+<ul style='list-style: none'>
+	<li id='export_to_prism-export_path'>
+		<b>export_path : <i>Path | str | None, optional</i></b>
+		<ul style='list-style: none'>
+			<li id='export_to_prism-export_path-description'>String or Path object representing the directory to export the new file.</li>
+		</ul>
+	</li>
+</ul>
+
 > Example Usage
 
 - Create the dataframe:
@@ -105,49 +148,6 @@ Export dataframes or plots to csv files or png files, respectively.
   ```
 
   - This would generate a csv file at `~/USER/Downloads/vo2_df.csv`
-
-<hr>
-
-### Methods
-
-<strong id='export-to-prism'>export_to_prism</strong>(<b>data</b>, <b>groups</b><i>=\_NoDefault.no_default</i>, <b>filename</b><i>=\_NoDefault.no_default</i>, <b>export_path</b><i>=\_NoDefault.no_default</i>)
-
-Format and export a <sablepy.Data> object for Prism.
-
-> Parameters
-
-<ul style='list-style: none'>
-	<li id='export_to_prism-data'>
-		<b>data : <i>Data</i></b>
-		<ul style='list-style: none'>
-			<li id='export_to_prism-data-description'>A <code>sablepy.Data</code> object.</li>
-		</ul>
-	</li>
-</ul>
-<ul style='list-style: none'>
-	<li id='export_to_prism-groups'>
-		<b>groups : <i>list[Group], optional</i></b>
-		<ul style='list-style: none'>
-			<li id='export_to_prism-groups-description'>List of <code>sablepy.dataclasses.Group</code> objects.</li>
-		</ul>
-	</li>
-</ul>
-<ul style='list-style: none'>
-	<li id='export_to_prism-filename'>
-		<b>filename : <i>str | None, optional</i></b>
-		<ul style='list-style: none'>
-			<li id='export_to_prism-filename-description'>String expression representing desired filename.</li>
-		</ul>
-	</li>
-</ul>
-<ul style='list-style: none'>
-	<li id='export_to_prism-export_path'>
-		<b>export_path : <i>Path | str | None, optional</i></b>
-		<ul style='list-style: none'>
-			<li id='export_to_prism-export_path-description'>String or Path object representing the directory to export the new file.</li>
-		</ul>
-	</li>
-</ul>
 
 <hr>
 
