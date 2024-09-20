@@ -1,10 +1,12 @@
 ## Data
 
 - [Parameters](#Data)
+
 - Methods:
 	- [average_by_group](#average-by-group)
 	- [exclude_cages](#exclude-cages)
 	- [extract_time_period](#extract-time-period)
+	- [get_cage_data](#get-cage-data)
 	- [get_channel_data](#get-channel-data)
 	- [groupby](#groupby)
 	- [remove_outliers](#remove-outliers)
@@ -119,6 +121,23 @@
 		<b>fmt : <i>str, default "%Y-%m-%d %H:%M:%S"</i></b>
 		<ul style='list-style: none'>
 			<li id='extract_time_period-fmt-description'>Format of start_datetime/end_datetime parameter.</li>
+		</ul>
+	</li>
+</ul>
+
+<hr>
+
+<strong id='get-cage-data'>get_cage_data</strong>(<b>cage_nums</b>)
+
+Returns a Data object with all data related to the desired cage number(s).
+
+> Parameters
+
+<ul style='list-style: none'>
+	<li id='get_cage_data-cage_nums'>
+		<b>cage_nums : <i>int | list[int]</i></b>
+		<ul style='list-style: none'>
+			<li id='get_cage_data-cage_nums-description'>Either a variable number of integer values (*args), or a list of integers.</li>
 		</ul>
 	</li>
 </ul>
