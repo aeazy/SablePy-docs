@@ -46,25 +46,30 @@ Bin data based on the time of day, as defined by `light_start` and `dark_start`.
 
 <hr>
 
-<strong id='calculate-cumulative-ee'>calculate_cumulative_ee</strong>(<b>df</b>)
+<strong id='calculate-cumulative-ee'>calculate_cumulative_ee</strong>(<b>df</b>, <b>ocm_version</b><i>="2.53.3+"</i>)
 
-> Description
-
-Calculates cumulative energy expenditure for the provided dataframe. Requires energy expenditure data present in `df`.
+Calculate cumulative energy expenditure (kcal).
 
 > Parameters
 
 <ul style='list-style: none'>
-    <li>
-        <b>df : <i>sablepy.core.data.Data | pandas.core.frame.DataFrame</i></b>
-        <ul style='list-style: none'>
-            <li>sablepy.Data or pandas.DataFrame containing energy expenditure data.</li>
-        </ul>
-    </li>
+	<li id='calculate_cumulative_ee-df'>
+		<b>df : <i>Data | DataFrame</i></b>
+		<ul style='list-style: none'>
+			<li id='calculate_cumulative_ee-df-description'><code>sablepy.Data</code> or <code>pandas.DataFrame</code> object with kcal_hr data.</li>
+		</ul>
+	</li>
+</ul>
+<ul style='list-style: none'>
+	<li id='calculate_cumulative_ee-ocm_version'>
+		<b>ocm_version : <i>Literal["2.53.2", "2.53.3+"], default "2.53.3+"</i></b>
+		<ul style='list-style: none'>
+			<li id='calculate_cumulative_ee-ocm_version-description'>String expression representing OCM version used to obtain kcal_hr data.</li>
+		</ul>
+	</li>
 </ul>
 
 <hr>
-
 <strong id='calculate-energy-balance'>calculate_energy_balance</strong>(<b>df</b>, <b>diet</b><i>=3.56</i>)
 
 > Description

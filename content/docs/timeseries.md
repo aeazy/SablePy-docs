@@ -3,6 +3,7 @@
 - [Parameters](#timeseries)
 - Methods:
   - [`append_data`](#append-data)
+  - [`rename_trace`](#rename-trace)
   - [`set_circadian`](#set-circadian)
   - [`set_legend_title`](#set-legend-title)
   - [`set_title`](#set-plot-title)
@@ -99,6 +100,23 @@ Append data to sablepy.TimeSeries.fig.
 		<b>secondary_y : <i>bool, default True</i></b>
 		<ul style='list-style: none'>
 			<li id='append_data-secondary_y-description'>Wheter a secondary y-axis is plotted or not.</li>
+		</ul>
+	</li>
+</ul>
+
+<hr>
+
+<strong id='rename-trace'>rename_trace</strong>(<b>traces</b>)
+
+Rename a TimeSeries trace.
+
+> Parameters
+
+<ul style='list-style: none'>
+	<li id='rename_trace-traces'>
+		<b>traces : <i>dict[str, str]</i></b>
+		<ul style='list-style: none'>
+			<li id='rename_trace-traces-description'>Dict object where key is a string expression representing the trace of the name currently and the value is a string expression representing the new name.</li>
 		</ul>
 	</li>
 </ul>
