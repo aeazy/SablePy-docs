@@ -69,6 +69,36 @@ Calculate cumulative energy expenditure (kcal).
 	</li>
 </ul>
 
+> Examples
+
+- Using the parameter `ocm_version` to correct cumulative energy expenditure data.
+
+  ```python
+    data = Data('example.csv')
+
+    df = data.get_channel_data("kcal")
+    df60 = df.resample_data('1h')
+    df150 = df.resample_data('150min')
+
+    ee15 = calculate_cumulative_ee(df)["kcal_hr_1"]
+    ee60 = calculate_cumulative_ee(df60)["kcal_hr_1"]
+    ee150 = calculate_cumulative_ee(df150)["kcal_hr_1"]
+  ```
+
+  <p align='center'>
+  <img src="../images/math/cumulativeEE_before.png" />
+  </p>
+
+```python
+  ee15 = calculate_cumulative_ee(df, ocm_version="2.53.2")["kcal_hr_1"]
+  ee60 = calculate_cumulative_ee(df60, ocm_version="2.53.2")["kcal_hr_1"]
+  ee150 = calculate_cumulative_ee(df150, ocm_version="2.53.2")["kcal_hr_1"]
+```
+
+  <p align='center'>
+  <img src="../images/math/cumulativeEE_after.png" />
+  </p>
+
 <hr>
 <strong id='calculate-energy-balance'>calculate_energy_balance</strong>(<b>df</b>, <b>diet</b><i>=3.56</i>)
 
@@ -79,18 +109,18 @@ Calculates the energy balance for each column provided. `df` must contain energy
 > Parameters
 
 <ul style='list-style: none'>
-    <li>
-        <b>df : <i>sablepy.core.data.Data | pandas.core.frame.DataFrame</i></b>
-        <ul style='list-style: none'>
-            <li>sablepy.Data or pandas.DataFrame containing food intake and energy expenditure data.</li>
-        </ul>
-    </li>
-    <li>
-        <b>diet : <i>float, default 3.56</i></b>
-        <ul style='list-style: none'>
-            <li>Energy value of diet in kcal/g. Defaults to LabDiet 5008 (3.56kcal/g).</li>
-        </ul>
-    </li>
+  <li>
+      <b>df : <i>sablepy.core.data.Data | pandas.core.frame.DataFrame</i></b>
+      <ul style='list-style: none'>
+          <li>sablepy.Data or pandas.DataFrame containing food intake and energy expenditure data.</li>
+      </ul>
+  </li>
+  <li>
+      <b>diet : <i>float, default 3.56</i></b>
+      <ul style='list-style: none'>
+          <li>Energy value of diet in kcal/g. Defaults to LabDiet 5008 (3.56kcal/g).</li>
+      </ul>
+  </li>
 </ul>
 
 <hr>
@@ -100,18 +130,18 @@ Calculates the energy balance for each column provided. `df` must contain energy
 > Parameters
 
 <ul style='list-style: none'>
-    <li>
-        <b>df : <i>sablepy.core.data.Data | pandas.core.frame.DataFrame</i></b>
-        <ul style='list-style: none'>
-            <li>sablepy.Data or pandas.DataFrame containing food intake and energy expenditure data.</li>
-        </ul>
-    </li>
-    <li>
-        <b>diet : <i>float, default 3.56</i></b>
-        <ul style='list-style: none'>
-            <li>Energy value of diet in kcal/g. Defaults to LabDiet 5008 (3.56kcal/g).</li>
-        </ul>
-    </li>
+  <li>
+      <b>df : <i>sablepy.core.data.Data | pandas.core.frame.DataFrame</i></b>
+      <ul style='list-style: none'>
+          <li>sablepy.Data or pandas.DataFrame containing food intake and energy expenditure data.</li>
+      </ul>
+  </li>
+  <li>
+      <b>diet : <i>float, default 3.56</i></b>
+      <ul style='list-style: none'>
+          <li>Energy value of diet in kcal/g. Defaults to LabDiet 5008 (3.56kcal/g).</li>
+      </ul>
+  </li>
 </ul>
 
 <strong id='calculate-group-averages'>calculate_group_averages</strong>(<b>df</b>, <b>groups</b>)
@@ -123,18 +153,18 @@ Calculates group averages of metabolic data. If more than one variable is detect
 > Parameters
 
 <ul style='list-style: none'>
-    <li>
-        <b>df : <i>sablepy.core.data.Data | pandas.core.frame.DataFrame</i></b>
-        <ul style='list-style: none'>
-            <li>sablepy.Data or pandas.DataFrame containing metabolic data.</li>
-        </ul>
-    </li>
-    <li>
-        <b>groups : <i>list[sablepy.common.dataclasses.Group]</i></b>
-        <ul style='list-style: none'>
-            <li>Expects a list of <code>sablepy.Group</code> objects. See the <a href="https://github.com/aeazy/SablePy/blob/main/sablepy/content/docs/dataclasses.md#group">Group documentation</a> for more information.</li>
-        </ul>
-    </li>
+  <li>
+      <b>df : <i>sablepy.core.data.Data | pandas.core.frame.DataFrame</i></b>
+      <ul style='list-style: none'>
+          <li>sablepy.Data or pandas.DataFrame containing metabolic data.</li>
+      </ul>
+  </li>
+  <li>
+      <b>groups : <i>list[sablepy.common.dataclasses.Group]</i></b>
+      <ul style='list-style: none'>
+          <li>Expects a list of <code>sablepy.Group</code> objects. See the <a href="https://github.com/aeazy/SablePy/blob/main/sablepy/content/docs/dataclasses.md#group">Group documentation</a> for more information.</li>
+      </ul>
+  </li>
 </ul>
 
 <hr>
@@ -148,18 +178,18 @@ Calculates the food or water consumption data on an hour-to-hour basis.
 > Parameters
 
 <ul style='list-style: none'>
-    <li>
-        <b>df : <i>pandas.core.frame.DataFrame</i></b>
-        <ul style='list-style: none'>
-            <li>pandas.DataFrame containing food or water intake data.</li>
-        </ul>
-    </li>
-    <li>
-        <b>food_or_water : <i>str, default 'both'</i></b>
-        <ul style='list-style: none'>
-            <li>Calculate hourly consumption for food or water. If <code>food_or_water='both'</code>, hourly channels will be calculated for food and water consumption channels.</li>
-        </ul>
-    </li>
+  <li>
+      <b>df : <i>pandas.core.frame.DataFrame</i></b>
+      <ul style='list-style: none'>
+          <li>pandas.DataFrame containing food or water intake data.</li>
+      </ul>
+  </li>
+  <li>
+      <b>food_or_water : <i>str, default 'both'</i></b>
+      <ul style='list-style: none'>
+          <li>Calculate hourly consumption for food or water. If <code>food_or_water='both'</code>, hourly channels will be calculated for food and water consumption channels.</li>
+      </ul>
+  </li>
 </ul>
 
 <hr>
@@ -173,12 +203,12 @@ Used by `sablepy.Combine` when combining multiple csv files where behavior data 
 > Parameters
 
 <ul style='list-style: none'>
-    <li>
-        <b>df : <i>sablepy.core.data.Data | pandas.core.frame.DataFrame</i></b>
-        <ul style='list-style: none'>
-            <li>sablepy.Data or pandas.DataFrame</li>
-        </ul>
-    </li>
+  <li>
+      <b>df : <i>sablepy.core.data.Data | pandas.core.frame.DataFrame</i></b>
+      <ul style='list-style: none'>
+          <li>sablepy.Data or pandas.DataFrame</li>
+      </ul>
+  </li>
 </ul>
 
 <hr>
@@ -192,12 +222,12 @@ Cumulative sum of a column on the nth axis.
 > Parameters
 
 <ul style='list-style: none'>
-    <li>
-        <b>data : <i>sablepy.core.data.Data | pandas.core.frame.DataFrame</i></b>
-        <ul style='list-style: none'>
-            <li>sablepy.core.data.Data | pandas.core.frame.DataFrame</li>
-        </ul>
-    </li>
+  <li>
+      <b>data : <i>sablepy.core.data.Data | pandas.core.frame.DataFrame</i></b>
+      <ul style='list-style: none'>
+          <li>sablepy.core.data.Data | pandas.core.frame.DataFrame</li>
+      </ul>
+  </li>
 </ul>
 
 <hr>
@@ -211,12 +241,12 @@ Used by `sablepy.Combine` after the cumulative difference is found using [`corre
 > Parameters
 
 <ul style='list-style: none'>
-    <li>
-        <b>df : <i>sablepy.core.data.Data | pandas.core.frame.DataFrame</i></b>
-        <ul style='list-style: none'>
-            <li>sablepy.Data or pandas.DataFrame</li>
-        </ul>
-    </li>
+  <li>
+      <b>df : <i>sablepy.core.data.Data | pandas.core.frame.DataFrame</i></b>
+      <ul style='list-style: none'>
+          <li>sablepy.Data or pandas.DataFrame</li>
+      </ul>
+  </li>
 </ul>
 
 <hr>
@@ -226,30 +256,30 @@ Used by `sablepy.Combine` after the cumulative difference is found using [`corre
 > Parameters
 
 <ul style='list-style: none'>
-    <li>
-        <b>df : <i>sablepy.core.data.Data | pandas.core.frame.DataFrame</i></b>
-        <ul style='list-style: none'>
-            <li>sablepy.Data or pandas.DataFrame object where index dtype is in datetime format.</li>
-        </ul>
-    </li>
-    <li>
-        <b>light_or_dark : <i>str, optional</i></b>
-        <ul style='list-style: none'>
-            <li>String expression defining if the circadian cycle is 'light' or 'dark'.</li>
-        </ul>
-    </li>
-    <li>
-        <b>start_hr : <i>int, optional</i></b>
-        <ul style='list-style: none'>
-            <li>Integer representation of cycle start in 24-hr format (e.g., <code>start_hr=6</code> is 6:00 AM).</li>
-        </ul>
-    </li>
-    <li>
-        <b>end_hr : <i>int, optional</i></b>
-        <ul style='list-style: none'>
-            <li>Integer representation of cycle end in 24-hr format (e.g., <code>end_hr=18</code> is 6:00 PM).</li>
-        </ul>
-    </li>
+  <li>
+      <b>df : <i>sablepy.core.data.Data | pandas.core.frame.DataFrame</i></b>
+      <ul style='list-style: none'>
+          <li>sablepy.Data or pandas.DataFrame object where index dtype is in datetime format.</li>
+      </ul>
+  </li>
+  <li>
+      <b>light_or_dark : <i>str, optional</i></b>
+      <ul style='list-style: none'>
+          <li>String expression defining if the circadian cycle is 'light' or 'dark'.</li>
+      </ul>
+  </li>
+  <li>
+      <b>start_hr : <i>int, optional</i></b>
+      <ul style='list-style: none'>
+          <li>Integer representation of cycle start in 24-hr format (e.g., <code>start_hr=6</code> is 6:00 AM).</li>
+      </ul>
+  </li>
+  <li>
+      <b>end_hr : <i>int, optional</i></b>
+      <ul style='list-style: none'>
+          <li>Integer representation of cycle end in 24-hr format (e.g., <code>end_hr=18</code> is 6:00 PM).</li>
+      </ul>
+  </li>
 </ul>
 
 <hr>
@@ -263,12 +293,12 @@ Calculates the difference between two points (diff = a[i+1] - a[i]). Useful for 
 > Parameters
 
 <ul style='list-style: none'>
-    <li>
-        <b>data : <i>sablepy.core.data.Data | pandas.core.frame.DataFrame | pandas.core.series.Series</i></b>
-        <ul style='list-style: none'>
-            <li>sablepy.Data, pandas.DataFrame or pandas.Series object.</li>
-        </ul>
-    </li>
+  <li>
+      <b>data : <i>sablepy.core.data.Data | pandas.core.frame.DataFrame | pandas.core.series.Series</i></b>
+      <ul style='list-style: none'>
+          <li>sablepy.Data, pandas.DataFrame or pandas.Series object.</li>
+      </ul>
+  </li>
 </ul>
 
 <hr>
@@ -278,22 +308,23 @@ Calculates the difference between two points (diff = a[i+1] - a[i]). Useful for 
 > Parameters
 
 <ul style='list-style: none'>
-    <li>
-        <b>df : <i>sablepy.core.data.Data | pandas.core.frame.DataFrame</i></b>
-        <ul style='list-style: none'>
-            <li>sablepy.Data or pandas.DataFrame.</li>
-        </ul>
-    </li>
-    <li>
-        <b>lower_bound : <i>float, default 0.01</i></b>
-        <ul style='list-style: none'>
-            <li>Float value defining the lower bound.</li>
-        </ul>
-    </li>
-    <li>
-        <b>upper_bound : <i>float, default 0.99</i></b>
-        <ul style='list-style: none'>
-            <li>Float value defining the upper bound.</li>
-        </ul>
-    </li>
+  <li>
+      <b>df : <i>sablepy.core.data.Data | pandas.core.frame.DataFrame</i></b>
+      <ul style='list-style: none'>
+          <li>sablepy.Data or pandas.DataFrame.</li>
+      </ul>
+  </li>
+  <li>
+      <b>lower_bound : <i>float, default 0.01</i></b>
+      <ul style='list-style: none'>
+          <li>Float value defining the lower bound.</li>
+      </ul>
+  </li>
+  <li>
+      <b>upper_bound : <i>float, default 0.99</i></b>
+      <ul style='list-style: none'>
+          <li>Float value defining the upper bound.</li>
+      </ul>
+  </li>
 </ul>
+```
