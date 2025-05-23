@@ -3,7 +3,7 @@
 - [`Axis`](#Axis)
 - [`Title`](#title)
 
-<strong id='Axis'>Axis</strong>(<b>title</b><i>=""</i>, <b>size</b><i>=12</i>)
+<strong id='Axis'>Axis</strong>(<b>title</b><i>=""</i>, <b>size</b><i>=16</i>)
 
 Sablepy Axis dataclass. This class is used to create the X and Y axes of the figure.
 
@@ -19,7 +19,7 @@ Sablepy Axis dataclass. This class is used to create the X and Y axes of the fig
 </ul>
 <ul style='list-style: none'>
 	<li id='Axis-size'>
-		<b>size : <i>int, default 12</i></b>
+		<b>size : <i>int, default 16</i></b>
 		<ul style='list-style: none'>
 			<li id='Axis-size-description'>The size of the title font.</li>
 		</ul>
