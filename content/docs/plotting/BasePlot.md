@@ -1,5 +1,8 @@
 # BasePlot
 
+The base class for all plots in SablePy. Utilized by `BarPlot`, `Heatmap`,
+`TimeSeries`, and `Subplots` and not typically used directly.
+
 - [Class Documentation](#baseplot)
 - [Class Methods](#class-methods)
   - [add_annotation](#add-annotation)

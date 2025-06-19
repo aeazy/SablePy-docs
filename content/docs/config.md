@@ -71,7 +71,7 @@ Class to represent the configuration of SablePy plotting.
 		<b>layout : <i>Layout</i></b>
 		<ul style='list-style: none'>
 			<li id='PlotConfig-layout-description'>Configuration for the plot
-			layout. See <a href='https://github.com/aeazy/SablePy-docs/blob/main/content/docs/plotting/attributes.md#layout)'>Layout</a>.</li>
+			layout. See <a href='https://github.com/aeazy/SablePy-docs/blob/main/content/docs/plotting/attributes.md#layout'>Layout</a>.</li>
 		</ul>
 	</li>
 </ul>
@@ -80,7 +80,7 @@ Class to represent the configuration of SablePy plotting.
 		<b>legend : <i>Legend</i></b>
 		<ul style='list-style: none'>
 			<li id='PlotConfig-legend-description'>Configuration for the plot
-			legend. See <a href='https://github.com/aeazy/SablePy-docs/blob/main/content/docs/plotting/attributes.md#legend)'>Legend</a>.</li>
+			legend. See <a href='https://github.com/aeazy/SablePy-docs/blob/main/content/docs/plotting/attributes.md#legend'>Legend</a>.</li>
 		</ul>
 	</li>
 </ul>
@@ -89,7 +89,7 @@ Class to represent the configuration of SablePy plotting.
 		<b>title : <i>Title</i></b>
 		<ul style='list-style: none'>
 			<li id='PlotConfig-title-description'>Configuration for the plot
-			title. See <a href='https://github.com/aeazy/SablePy-docs/blob/main/content/docs/plotting/attributes.md#title)'>Title</a>.</li>
+			title. See <a href='https://github.com/aeazy/SablePy-docs/blob/main/content/docs/plotting/attributes.md#title'>Title</a>.</li>
 		</ul>
 	</li>
 </ul>
@@ -98,7 +98,7 @@ Class to represent the configuration of SablePy plotting.
 		<b>xaxis : <i>Axis</i></b>
 		<ul style='list-style: none'>
 			<li id='PlotConfig-xaxis-description'>Configuration for the x-axis.
-			See <a href='https://github.com/aeazy/SablePy-docs/blob/main/content/docs/plotting/attributes.md#axis)'>Axis</a>.</li>
+			See <a href='https://github.com/aeazy/SablePy-docs/blob/main/content/docs/plotting/attributes.md#axis'>Axis</a>.</li>
 		</ul>
 	</li>
 </ul>
@@ -107,7 +107,7 @@ Class to represent the configuration of SablePy plotting.
 		<b>yaxis : <i>Axis</i></b>
 		<ul style='list-style: none'>
 			<li id='PlotConfig-yaxis-description'>Configuration for the y-axis.
-			See <a href='https://github.com/aeazy/SablePy-docs/blob/main/content/docs/plotting/attributes.md#axis)'>Axis</a>.</li>
+			See <a href='https://github.com/aeazy/SablePy-docs/blob/main/content/docs/plotting/attributes.md#axis'>Axis</a>.</li>
 		</ul>
 	</li>
 </ul>

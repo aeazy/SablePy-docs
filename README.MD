@@ -12,15 +12,15 @@ See the [Directory](#directory) for the full list of links to module documentati
 
 ## Directory
 
-| Module                                     | Description                                                                             |
-| ------------------------------------------ | --------------------------------------------------------------------------------------- |
-| [Annotations](content/docs/annotations.md) | Annotate plots                                                                          |
-| [Bar Plot](content/docs/barplot.md)        | Generate and customize bar plots                                                        |
-| [Data](content/docs/data.md)               | Read CSV files and analyze data with numerous functions to assist in your data analysis |
-| [Dataclasses](content/docs/dataclasses.md) | Class wrappers for various parameters                                                   |
-| [Export](content/docs/export.md)           | Export dataframes and plots to csv, pngs, or pdf files                                  |
-| [Math](content/docs/math.md)               | Supplemental functions for data analysis                                                |
-| [Stats](content/docs/stats.md)             | Statistical methods for data analysis                                                   |
-| [Subplots](content/docs/subplots.md)       | Generate and customize subplots                                                         |
-| [Time Series](content/docs/timeseries.md)  | Generate and customize line plots                                                       |
-| [XL File](content/docs/xl_file.md)         | Excel file support for `sablepy.Data`                                                   |
+| Module                                          | Description                                                                             |
+| ----------------------------------------------- | --------------------------------------------------------------------------------------- |
+| [`Data`](content/docs/data.md)                  | Read CSV files and analyze data with numerous functions to assist in your data analysis |
+| [`Plotting`](content/docs/plotting/Plotting.md) | Generate and customize plots                                                            |
+| [Data](content/docs/data.md)                    | Read CSV files and analyze data with numerous functions to assist in your data analysis |
+| [Dataclasses](content/docs/dataclasses.md)      | Class wrappers for various parameters                                                   |
+| [Export](content/docs/export.md)                | Export dataframes and plots to csv, pngs, or pdf files                                  |
+| [Math](content/docs/math.md)                    | Supplemental functions for data analysis                                                |
+| [Stats](content/docs/stats.md)                  | Statistical methods for data analysis                                                   |
+| [Subplots](content/docs/subplots.md)            | Generate and customize subplots                                                         |
+| [Time Series](content/docs/timeseries.md)       | Generate and customize line plots                                                       |
+| [XL File](content/docs/xl_file.md)              | Excel file support for `sablepy.Data`                                                   |
