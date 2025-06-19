@@ -13,6 +13,15 @@ ensuring a consistent and flexible approach to plot customization. The
 `PlotConfig` dataclass includes parameters for titles, axis labels, colors, and other
 styling options. See [PlotConfig](../config.md#PlotConfig) for more details.
 
+While SablePy Plotting can utilize a `pandas.DataFrame` directly, the workflow
+is optimized for use with the `sablepy.Data` class. This integration allows for
+seamless data manipulation and visualization, making it easier to analyze and
+plot.
+
 ## Plotting Classes
 
-- [`Bar`](./Bar): Create and customize bar plots with various options for grouping, stacking, and styling.
+- [`Bar`](./Bar): Create and customize bar plots with various options for
+  grouping, stacking, and styling.
+- [`Heatmaps`](./Heatmaps): Generate heatmaps to visualize data cage activity
+  over time.
+- [`TimeSeries`](./TimeSeries): Create line plots to visualize time series data. 

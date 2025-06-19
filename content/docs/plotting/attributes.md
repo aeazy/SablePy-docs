@@ -195,7 +195,7 @@ Layout class for configuring plot layout attributes.
         </ul>
     </li>
     <li>
-        <b id='layout-theme'>theme : <i>Optional[ThemeType], "default".</b>
+        <b id='layout-theme'>theme : <i>Optional[ThemeType], "default".</i></b>
         <ul style='list-style: none'>
             <li id='layout-theme-description'>The theme for the plot layout. Defaults to "default". Can also be a <a href="#theme">Theme</a> object.</li>
         </ul>
@@ -207,6 +207,57 @@ Layout class for configuring plot layout attributes.
         </ul>
     </li>
 </ul>
+
+<blockquote id="layout-examples">Examples:</blockquote><br>
+
+Set global circadian start and end times:
+
+```python
+from sablepy import config
+
+config.data.light_start = 7  # 7 AM
+config.data.dark_start = 19  # 7 PM
+```
+
+Set global layout theme to dark:
+
+```python
+from sablepy import config
+
+config.plotting.layout.theme = "dark"
+```
+
+Set global layout dimensions:
+
+```python
+from sablepy import config
+
+config.plotting.layout.width = 800  # Width in pixels
+config.plotting.layout.height = 600  # Height in pixels
+```
+
+Set custom marker colors globally:
+
+```python
+from sablepy import config
+
+config.plotting.layout.marker_colors = ['red', 'blue', 'green']
+```
+
+Defining a custom theme globally:
+
+```python
+from sablepy import config, Theme
+
+custom_theme = Theme(
+    name='custom',
+    bg_color='lightgrey',
+    plot_bg_color='white',
+    marker_colors=['red', 'blue', 'green']
+)
+
+config.plotting.layout.theme = custom_theme
+```
 
 <hr>
 
@@ -342,7 +393,7 @@ Theme class for managing plot appearance attributes.
             </li>
         </ul>
     </li>
-    
+    <li>
         <b id='theme-marker_colors'>marker_colors : <i>Optional[list[str]], None</i></b>
         <ul style='list-style: none'>
             <li id='theme-marker_colors-description'>A list of colors to be used for plot markers. Colors can be in hex format (e.g., "#RRGGBB") a CSS named colors (e.g., "red"), or RGB format (e.g., "rgb(255,0,0)").</li>
